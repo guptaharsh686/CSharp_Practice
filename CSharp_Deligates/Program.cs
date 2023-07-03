@@ -12,7 +12,10 @@ namespace CSharp_Deligates
             var filters = new PhotoFilters();
             var photo = new Photo();
 
-            PhotoProcessor.photoFilterHandler photoFilterHandler = filters.ApplyBrightness;
+            //PhotoProcessor.photoFilterHandler photoFilterHandler = filters.ApplyBrightness;
+            //using predefined delegates;
+
+            Action<Photo> photoFilterHandler = filters.ApplyBrightness;
             photoFilterHandler += filters.ApplyContrast;
             photoFilterHandler += AddRedEye;
 

@@ -6,8 +6,12 @@ namespace CSharp_Deligates
 {
     public class PhotoProcessor
     {
-        public delegate void photoFilterHandler(Photo photo);
-        public void Process(string path,photoFilterHandler photoFilter)
+        //public delegate void photoFilterHandler(Photo photo);
+       //using pre defined generic delegates
+       //Action returns void
+       //Func can return any value
+        
+        public void Process(string path,Action<Photo> photoFilter)
         {
             var photo = Photo.Load(path);
 
