@@ -6,14 +6,16 @@ namespace CSharp_Deligates
 {
     public class PhotoProcessor
     {
-        public void Process(string path)
+        public delegate void photoFilterHandler(Photo photo);
+        public void Process(string path,photoFilterHandler photoFilter)
         {
             var photo = Photo.Load(path);
 
-            var filters = new PhotoFilters();
-            filters.ApplyBrightness(photo);
-            filters.ApplyContrast(photo);
-            filters.Resize(photo);
+            //var filters = new PhotoFilters();
+            //filters.ApplyBrightness(photo);
+            //filters.ApplyContrast(photo);
+            //filters.Resize(photo);
+            photoFilter(photo);
 
             photo.Save();
         }
