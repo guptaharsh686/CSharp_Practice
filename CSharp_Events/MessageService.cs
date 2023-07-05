@@ -6,9 +6,9 @@ namespace CSharp_Events
 {
     public class MessageService
     {
-        public void OnVideoEncoded(Object source,EventArgs args)
+        public void OnVideoEncoded(Object source,VideoEventArgs args)
         {
-            Console.WriteLine("Sending a message");
+            Console.WriteLine("Sending a message..." + args.Video.Title);
         }
     }
 }

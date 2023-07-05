@@ -6,9 +6,9 @@ namespace CSharp_Events
 {
     public class MailService
     {
-        public void OnVideoEncoded(Object source,EventArgs e)
+        public void OnVideoEncoded(Object source,VideoEventArgs e)
         {
-            Console.WriteLine("Sending an email");
+            Console.WriteLine("Sending an email..." + e.Video.Title);
         }
     }
 }

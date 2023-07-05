@@ -6,7 +6,7 @@ namespace CSharp_Events
 {
     public class Video
     {
-        private string Title;
+        public string Title;
 
         public Video(string title)
         {
