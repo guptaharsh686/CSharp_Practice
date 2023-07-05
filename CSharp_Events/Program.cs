@@ -18,6 +18,11 @@ namespace CSharp_Events
             //passing the pointer/refrence so whenever videoEncoded event happens it is published and envokes the method so that subscribers can be notified
             encoder.videoEncoded += messerv.OnVideoEncoded;
 
+
+            //using build in event handler without event args
+            encoder.videoEncodedWithoutArgs += mailserv.OnVideoEncodedWithoutArgs;
+            encoder.videoEncodedWithoutArgs += messerv.OnVideoEncodedWithoutArgs;
+
             encoder.Encode(video);
         }
     }

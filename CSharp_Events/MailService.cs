@@ -10,5 +10,10 @@ namespace CSharp_Events
         {
             Console.WriteLine("Sending an email..." + e.Video.Title);
         }
+
+        public void OnVideoEncodedWithoutArgs(Object s, EventArgs args)
+        {
+            Console.WriteLine("Sending an email without args");
+        }
     }
 }
